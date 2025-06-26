@@ -2,66 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://localhost:1313/categories/</loc>
+    <loc>https://vickiiimu.github.io/my-site/categories/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/tags/computer-vision/</loc>
+    <loc>https://vickiiimu.github.io/my-site/tags/computer-vision/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/tags/deep-learning/</loc>
+    <loc>https://vickiiimu.github.io/my-site/tags/deep-learning/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/posts/vit/</loc>
+    <loc>https://vickiiimu.github.io/my-site/posts/vit/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/posts/</loc>
+    <loc>https://vickiiimu.github.io/my-site/posts/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/categories/recreated-from-scratch/</loc>
+    <loc>https://vickiiimu.github.io/my-site/categories/recreated-from-scratch/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/series/recreated-from-scratch/</loc>
+    <loc>https://vickiiimu.github.io/my-site/series/recreated-from-scratch/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/series/</loc>
+    <loc>https://vickiiimu.github.io/my-site/series/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/tags/</loc>
+    <loc>https://vickiiimu.github.io/my-site/tags/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/tags/transformers/</loc>
+    <loc>https://vickiiimu.github.io/my-site/tags/transformers/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/</loc>
+    <loc>https://vickiiimu.github.io/my-site/</loc>
     <lastmod>2025-06-26T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/about/</loc>
+    <loc>https://vickiiimu.github.io/my-site/about/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://localhost:1313/authors/</loc>
+    <loc>https://vickiiimu.github.io/my-site/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

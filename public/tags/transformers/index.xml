@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transformers on For Later Analysis</title>
-    <link>https://localhost:1313/tags/transformers/</link>
+    <link>https://vickiiimu.github.io/my-site/tags/transformers/</link>
     <description>Recent content in Transformers on For Later Analysis</description>
     <generator>Hugo</generator>
     <language>en</language>
     <managingEditor>vymu@mit.edu (Vicki Mu)</managingEditor>
     <webMaster>vymu@mit.edu (Vicki Mu)</webMaster>
     <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://localhost:1313/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://vickiiimu.github.io/my-site/tags/transformers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>From Pixels to Predictions: Building a Transformer for Images</title>
-      <link>https://localhost:1313/posts/vit/</link>
+      <link>https://vickiiimu.github.io/my-site/posts/vit/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate><author>vymu@mit.edu (Vicki Mu)</author>
-      <guid>https://localhost:1313/posts/vit/</guid>
+      <guid>https://vickiiimu.github.io/my-site/posts/vit/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;Originally published on &lt;a href=&#34;https://pub.towardsai.net/from-pixels-to-predictions-building-a-transformer-for-images-fea5a4f64816&#34;&gt;Medium&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Convolutional neural networks have been the driving force behind almost every major breakthrough in computer vision — &lt;strong&gt;but what if they’ve been holding us back all along?&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>
