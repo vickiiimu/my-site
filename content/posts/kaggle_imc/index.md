@@ -21,7 +21,7 @@ toc: true
 
 ![test image 2](/my-site/img/kaggle_imc/imc2025.png)
 
-![Diagram](/my-site/img/kaggle_imc/Different_Stairs_Diagram.png)
+{{< figure src="{{< relURL "img/kaggle_imc/Different_Stairs_Diagram.png" >}}" >}}
 
 {{< figure src="/img/kaggle_imc/imc2025.png" >}}
 
