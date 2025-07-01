@@ -21,7 +21,7 @@ Convolutional neural networks have been the driving force behind almost every ma
 In 2020, a team of researchers at Google asked the bold question: _Can we throw out convolutions entirely and still build world-class image models?_  
 Their answer — **the Vision Transformer (ViT)**— sparked a new era in deep learning.
 
-{{< figure src="/img/vit/featured-ViTarch.png" alt="Diagram showing the architecture of a Vision Transformer (ViT). An input image is divided into patches, linearly embedded with positional information, and passed through a stack of transformer encoder blocks. The encoder includes multi-head self-attention, normalization, and MLP layers, with output passed to a classification head." caption="**Figure 1**: Vision Transformer (ViT) architecture. Source: Dosovitskiy et al., 2020 ([arXiv:2010.11929](https://arxiv.org/abs/2010.11929))" >}}
+{{< figure src="/my-site/img/vit/featured-ViTarch.png" alt="Diagram showing the architecture of a Vision Transformer (ViT). An input image is divided into patches, linearly embedded with positional information, and passed through a stack of transformer encoder blocks. The encoder includes multi-head self-attention, normalization, and MLP layers, with output passed to a classification head." caption="**Figure 1**: Vision Transformer (ViT) architecture. Source: Dosovitskiy et al., 2020 ([arXiv:2010.11929](https://arxiv.org/abs/2010.11929))" >}}
 
 I'm an undergraduate student at MIT with an interest in computer vision and generative models, and I recently implemented a Vision Transformer from scratch to better understand its architecture. _This post is a distilled guide to that process, blending theory, visuals and code._
 
@@ -41,7 +41,7 @@ In 2017, researchers at Google made a breakthrough in their paper [_Attention Is
 
 This mechanism eliminated the need for recurrence and fixed step order, sidestepping the main weaknesses of RNNs.
 
-{{< figure src="/img/vit/RNN-vs-Transformer.jpg" alt="Diagram comparing RNNs and Transformers. On the left, RNNs process inputs sequentially from left to right, passing hidden states forward through time steps. On the right, a Transformer encoder processes all inputs simultaneously, with each input connected to all others using weighted attention lines of varying thickness. Arrows and labels highlight the difference in processing order and parallelism." caption="**Figure 2**: RNNs handle inputs sequentially, while Transformers attend to all tokens in parallel. Line thickness represents attention strength. Source: author." >}}
+{{< figure src="/my-site/img/vit/RNN-vs-Transformer.jpg" alt="Diagram comparing RNNs and Transformers. On the left, RNNs process inputs sequentially from left to right, passing hidden states forward through time steps. On the right, a Transformer encoder processes all inputs simultaneously, with each input connected to all others using weighted attention lines of varying thickness. Arrows and labels highlight the difference in processing order and parallelism." caption="**Figure 2**: RNNs handle inputs sequentially, while Transformers attend to all tokens in parallel. Line thickness represents attention strength. Source: author." >}}
 
 Within just two years, **Transformer architecture** completely took over NLP.  
 It proved more efficient, easier to scale, and better at modeling long-range dependencies than any of its predecessors. Transformers quickly became the backbone of major breakthrough models: **BERT** (for bi-directional context), **GPT** (for generative, causal language modeling), and **T5** (for sequence to sequence tasks).
@@ -83,7 +83,7 @@ For example:
 
 Instead of a sentence of words, ViT sees a sequence of image patch embeddings.
 
-{{< figure src="/img/vit/Patchembedding.jpg" caption="**Figure 3**: Patch embedding. Source: [Dosovitskiy et al., 2020](https://arxiv.org/abs/2010.11929)" alt="Patch embedding diagram from ViT paper" >}}
+{{< figure src="/my-site/img/vit/Patchembedding.jpg" caption="**Figure 3**: Patch embedding. Source: [Dosovitskiy et al., 2020](https://arxiv.org/abs/2010.11929)" alt="Patch embedding diagram from ViT paper" >}}
 
 > **Analogy**: Just like a tokenizer turns a sentence into a sequence of word embeddings, the ViT turns an image into a sequence of patch embeddings.
 
@@ -111,14 +111,14 @@ Instead of using one attention function, MHSA splits the input into **multiple �
 - The input sequence of tokens (shape `[B, N, D]`) is linearly projected into: **Queries** `Q`, **Keys** `K`, and **Values** `V`.
 - Each attention head computes:
 
-{{< figure src="/img/vit/sdp.png" caption="Equation 1: Scaled Dot-Product Attention" alt="Attention equation visual" >}}
+{{< figure src="/my-site/img/vit/sdp.png" caption="Equation 1: Scaled Dot-Product Attention" alt="Attention equation visual" >}}
 
 - Multiple heads run in parallel, and their outputs are concatenated and linearly projected back.
 
 **Why “multi-head”?**  
 Each head attends to different parts of the sequence. This allows the model to understand complex relationships in parallel—not just spatial proximity, but also semantic structure.
 
-{{< figure src="/img/vit/multihead.png" alt="Two diagrams. On the left: Scaled Dot-Product Attention showing the flow Q -> K -> V through MatMul, Scale, Mask, Softmax, and another MatMul. On the right: Multi-Head Attention with multiple scaled dot-product attention heads, whose outputs are concatenated and passed through a linear layer." caption="**Figure 4**: The left shows how attention scores are computed using queries (Q), keys (K), and values (V). The right illustrates how multiple attention 'heads' capture diverse representations in parallel. Source: Vaswani et al. ([arXiv:1706.03762](https://arxiv.org/abs/1706.03762))" >}}
+{{< figure src="/my-site/img/vit/multihead.png" alt="Two diagrams. On the left: Scaled Dot-Product Attention showing the flow Q -> K -> V through MatMul, Scale, Mask, Softmax, and another MatMul. On the right: Multi-Head Attention with multiple scaled dot-product attention heads, whose outputs are concatenated and passed through a linear layer." caption="**Figure 4**: The left shows how attention scores are computed using queries (Q), keys (K), and values (V). The right illustrates how multiple attention 'heads' capture diverse representations in parallel. Source: Vaswani et al. ([arXiv:1706.03762](https://arxiv.org/abs/1706.03762))" >}}
 
 ### 2.4 Transformer Encoder
 
@@ -137,7 +137,7 @@ Each block enables the model to **attend globally and transform features** acros
 4. Another **LayerNorm**, followed by a small **MLP**.  
 5. Another **residual connection** adds the MLP output.
 
-{{< figure src="/img/vit/transformer.png" alt="Diagram of a Vision Transformer block. The input embedded patches go through LayerNorm, Multi-Head Attention, residual connection, then LayerNorm, MLP, and another residual connection." caption="**Figure 5**: ViT encoder block with attention, MLP, and residuals. Source: author" >}}
+{{< figure src="/my-site/img/vit/transformer.png" alt="Diagram of a Vision Transformer block. The input embedded patches go through LayerNorm, Multi-Head Attention, residual connection, then LayerNorm, MLP, and another residual connection." caption="**Figure 5**: ViT encoder block with attention, MLP, and residuals. Source: author" >}}
 
 This structure repeats across all transformer layers (e.g., 12 layers in ViT-Base).
 
@@ -411,18 +411,18 @@ As shown in the training plots below:
 - **Training loss** steadily decreased, indicating that the model was effectively minimizing prediction error on the training set.  
 - **Test accuracy** improved rapidly within the first 10 epochs, plateauing around 60% thereafter. This suggests the model learned quickly but struggled to generalize further without additional techniques like data augmentation or regularization.  
 
-{{< figure src="/img/vit/ViTlossAccuracy.png" caption="**Figure 6:** Training loss and test accuracy over 30 epochs. Source: author" >}}
+{{< figure src="/my-site/img/vit/ViTlossAccuracy.png" caption="**Figure 6:** Training loss and test accuracy over 30 epochs. Source: author" >}}
 
 Here are a few **example outputs** from the model. While it correctly identified many samples (like cats and frogs), it struggled with visually similar classes (e.g., misclassifying a ship as an airplane).
 
-{{< figure src="/img/vit/ViTpred.png" caption="**Figure 7:** Example predictions on CIFAR-10 images. Source: author" >}}
+{{< figure src="/my-site/img/vit/ViTpred.png" caption="**Figure 7:** Example predictions on CIFAR-10 images. Source: author" >}}
 
 The bar chart below shows how well the model performed **across all 10 classes**. Notably:
 
 - The model performed best on *ship*, *automobile*, and *frog* classes — likely due to more distinctive visual features.
 - Performance lagged on *cat* and *bird*, which may be harder to distinguish due to higher intra-class variation and similar textures or shapes shared with other animals.
 
-{{< figure src="/img/vit/ViTaccPerClass.png" caption="**Figure 8:** Accuracy by class. Source: author" >}}
+{{< figure src="/my-site/img/vit/ViTaccPerClass.png" caption="**Figure 8:** Accuracy by class. Source: author" >}}
 
 ---
 

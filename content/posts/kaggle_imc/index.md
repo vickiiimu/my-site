@@ -16,12 +16,7 @@ toc: true
 > _Originally published on [Medium](https://medium.com/@vicki.y.mu/beginning-on-the-leaderboard-my-first-kaggle-challenge-in-7-days-0749ceebc825)._
 
 ## 1. Opening: Why I Joined So Late
-
-![test image](/img/kaggle_imc/imc2025.png)
-
-![test image 2](/my-site/img/kaggle_imc/imc2025.png)
-
-{{< figure src="/img/kaggle_imc/imc2025.png" >}}
+{{< figure src="/my-site/img/kaggle_imc/imc2025.png" >}}
 
 I first saw the Image Matching Challenge pop up on Kaggle sometime in early May. I bookmarked it out of curiosity — the problem sounded cool, and I’d been meaning to get into competitions for a while — but between MIT finals, end-of-semester deadlines, and packing up to move out, it got buried under everything else.
 
@@ -39,7 +34,7 @@ But 2025’s edition took that basic setup and made it *brutal*.
 
 Unlike past IMC competitions, where the organizers provided pre-segmented scenes, **this year you had to segment the scenes yourself**. That meant reverse-engineering the scene structure from hundreds of loosely grouped image pairs before you could even begin estimating poses. It added an extra layer of uncertainty — you weren’t just solving the matching problem, you were solving the *context* problem, too.
 
-{{< figure src="/img/kaggle_imc/Different_Stairs_Diagram.png" caption="These are two completely different stairwells — but my pipeline lumped them into the same scene more than once. Turns out ‘gray steps in a hallway’ isn’t a very unique visual signature. Source: Kaggle IMC 2025" >}}
+{{< figure src="/my-site/img/kaggle_imc/Different_Stairs_Diagram.png" caption="These are two completely different stairwells — but my pipeline lumped them into the same scene more than once. Turns out ‘gray steps in a hallway’ isn’t a very unique visual signature. Source: Kaggle IMC 2025" >}}
 
 What really separated IMC 2025 from class projects or standard CV pipelines was the real-world messiness of it all:
 
@@ -55,11 +50,11 @@ The real curveball in IMC 2025 was **scene segmentation**. Unlike in previous ye
 
 To tackle that, I used **DINOv2 as a global image descriptor**. For each image, I extracted global embeddings using a pretrained DINOv2 backbone, then clustered the embeddings using KMeans to group images into scenes. It wasn’t perfect — and I definitely tuned it more by vibe than theory — but it was good enough to avoid total chaos.
 
-{{< figure src="/img/kaggle_imc/cluster.png" caption="Clustering results on the ET dataset using DINOv2 + KMeans. Two main clusters, with 3 outliers flagged. Source: author" >}}
+{{< figure src="/my-site/img/kaggle_imc/cluster.png" caption="Clustering results on the ET dataset using DINOv2 + KMeans. Two main clusters, with 3 outliers flagged. Source: author" >}}
 
 Still, some scenes like **vineyard** and **stairs** were incredibly brittle. These environments had so much **repetition and structural symmetry** that even small mistakes in clustering led to **completely incorrect pose estimates**. Multiple rows of grapevines or similar staircases taken at slightly different angles or lighting conditions could easily be grouped together, even when they came from different physical spaces. Those mistakes hit hard — the mAA metric punishes wrong matches aggressively, and once scene segmentation goes wrong, everything downstream follows.
 
-{{< figure src="/Users/vicki/my-site/static/img/kaggle_imc/differentscenes.png" caption="Three different vineyard scenes — visually similar enough to confuse DINOv2 and cluster them together, despite coming from completely different locations. These kinds of mistakes wrecked downstream pose estimates. Source: Kaggle IMC 2025" >}}
+{{< figure src="/my-site/img/kaggle_imc/differentscenes.png" caption="Three different vineyard scenes — visually similar enough to confuse DINOv2 and cluster them together, despite coming from completely different locations. These kinds of mistakes wrecked downstream pose estimates. Source: Kaggle IMC 2025" >}}
 
 Because I had joined the competition so late, I leaned heavily on the **Kaggle discussion boards** to stay afloat. Reading through others’ pain points and quick wins helped me shortcut a lot of early confusion — especially around runtime optimization and evaluating failure cases like ET, stairs, and the infamous castle towers. I also saw a few people visualizing keypoint matches and inlier ratios, which helped me trust (or distrust) my pipeline more quickly.
 
@@ -91,7 +86,7 @@ By this point, it wasn’t about adding features — it was about **pipeline tri
 
 Days 5 and 6 were a blur of last-minute patches, scene-level debugging, and running the full dataset through my pipeline *without it catching fire*. I knew I was running out of time, and the priority shifted from “can I improve this?” to “can I trust this?”
 
-{{< figure src="/img/kaggle_imc/prints.png" caption="The real MVPs were all the print statements. Source: author" >}}
+{{< figure src="/my-site/img/kaggle_imc/prints.png" caption="The real MVPs were all the print statements. Source: author" >}}
 
 I focused on final structure: stitching together my best scene clustering logic (DINOv2 + match-graph analysis), a couple custom COLMAP reruns for the weird scenes (looking at you, **ET**), and a filtering layer for pruning obviously bad pairs. **Stairs** remained one of the hardest — visually repetitive, sometimes indoor, sometimes outdoor, and prone to degeneracy in pose estimation. My only move there was to hand-check a few sample scenes and hope the outlier filter was doing its job.
 
@@ -107,7 +102,7 @@ I queued up my final pipeline the night before the deadline — patched, filtere
 
 When the results came in, I landed at **Rank 260 out of 943**.
 
-{{< figure src="/img/kaggle_imc/leaderboard.png" caption="Final leaderboard rank: 260 out of 943 — not a medal, but a 501-place climb in seven days, and my first ever Kaggle comp. I’ll take it. Source: author" >}}
+{{< figure src="/my-site/img/kaggle_imc/leaderboard.png" caption="Final leaderboard rank: 260 out of 943 — not a medal, but a 501-place climb in seven days, and my first ever Kaggle comp. I’ll take it. Source: author" >}}
 
 No medal, no spotlight — but for a **first competition** done in **seven days**, while figuring out scene segmentation, pose estimation, LightGlue, COLMAP, and Kaggle notebooks on the fly... I was proud of that number.
 
@@ -115,7 +110,7 @@ It wasn’t about beating anyone else. It was about proving to myself that I cou
 
 I didn’t expect a medal — but seeing my name halfway up the leaderboard felt like proof of concept: I could do this.
 
-{{< figure src="/img/kaggle_imc/diagram.png" caption="What one week of late nights, weird bugs, and unexpected breakthroughs looked like. The timeline of how I (barely) held it all together. Source: author" >}}
+{{< figure src="/my-site/img/kaggle_imc/diagram.png" caption="What one week of late nights, weird bugs, and unexpected breakthroughs looked like. The timeline of how I (barely) held it all together. Source: author" >}}
 
 ## 7. What I Learned in 7 Days
 
