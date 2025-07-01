@@ -21,6 +21,8 @@ toc: true
 
 ![test image 2](/my-site/img/kaggle_imc/imc2025.png)
 
+![Diagram](/my-site/img/kaggle_imc/Different_Stairs_Diagram.png)
+
 {{< figure src="/img/kaggle_imc/imc2025.png" >}}
 
 I first saw the Image Matching Challenge pop up on Kaggle sometime in early May. I bookmarked it out of curiosity — the problem sounded cool, and I’d been meaning to get into competitions for a while — but between MIT finals, end-of-semester deadlines, and packing up to move out, it got buried under everything else.
