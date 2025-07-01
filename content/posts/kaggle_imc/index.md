@@ -17,7 +17,9 @@ toc: true
 
 ## 1. Opening: Why I Joined So Late
 
-{{< figure src="img/kaggle_imc/imc2025.png" >}}
+![test image](/img/kaggle_imc/imc2025.png)
+
+{{< figure src="/img/kaggle_imc/imc2025.png" >}}
 
 I first saw the Image Matching Challenge pop up on Kaggle sometime in early May. I bookmarked it out of curiosity — the problem sounded cool, and I’d been meaning to get into competitions for a while — but between MIT finals, end-of-semester deadlines, and packing up to move out, it got buried under everything else.
 
