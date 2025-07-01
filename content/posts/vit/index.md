@@ -21,7 +21,7 @@ Convolutional neural networks have been the driving force behind almost every ma
 In 2020, a team of researchers at Google asked the bold question: _Can we throw out convolutions entirely and still build world-class image models?_  
 Their answer — **the Vision Transformer (ViT)**— sparked a new era in deep learning.
 
-{{< figure src="img/vit/featured-ViTarch.png" alt="Diagram showing the architecture of a Vision Transformer (ViT). An input image is divided into patches, linearly embedded with positional information, and passed through a stack of transformer encoder blocks. The encoder includes multi-head self-attention, normalization, and MLP layers, with output passed to a classification head." caption="**Figure 1**: Vision Transformer (ViT) architecture. Source: Dosovitskiy et al., 2020 ([arXiv:2010.11929](https://arxiv.org/abs/2010.11929))" >}}
+{{< figure src="/img/vit/featured-ViTarch.png" alt="Diagram showing the architecture of a Vision Transformer (ViT). An input image is divided into patches, linearly embedded with positional information, and passed through a stack of transformer encoder blocks. The encoder includes multi-head self-attention, normalization, and MLP layers, with output passed to a classification head." caption="**Figure 1**: Vision Transformer (ViT) architecture. Source: Dosovitskiy et al., 2020 ([arXiv:2010.11929](https://arxiv.org/abs/2010.11929))" >}}
 
 I'm an undergraduate student at MIT with an interest in computer vision and generative models, and I recently implemented a Vision Transformer from scratch to better understand its architecture. _This post is a distilled guide to that process, blending theory, visuals and code._
 
