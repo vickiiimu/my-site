@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recreated From Scratch on For Later Analysis</title>
-    <link>https://vickiiimu.github.io/my-site/categories/recreated-from-scratch/</link>
+    <link>https://vickiimu.github.io/my-site/categories/recreated-from-scratch/</link>
     <description>Recent content in Recreated From Scratch on For Later Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>vymu@mit.edu (Vicki Mu)</managingEditor>
     <webMaster>vymu@mit.edu (Vicki Mu)</webMaster>
     <copyright>© 2025 Vicki Mu</copyright>
-    <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://vickiiimu.github.io/my-site/categories/recreated-from-scratch/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://vickiimu.github.io/my-site/categories/recreated-from-scratch/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>From Pixels to Predictions: Building a Transformer for Images</title>
-      <link>https://vickiiimu.github.io/my-site/posts/vit/</link>
+      <link>https://vickiimu.github.io/my-site/posts/vit/</link>
       <pubDate>Thu, 26 Jun 2025 00:00:00 +0000</pubDate>
       <author>vymu@mit.edu (Vicki Mu)</author>
-      <guid>https://vickiiimu.github.io/my-site/posts/vit/</guid>
+      <guid>https://vickiimu.github.io/my-site/posts/vit/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Originally published on &lt;a
   href=&#34;https://pub.towardsai.net/from-pixels-to-predictions-building-a-transformer-for-images-fea5a4f64816&#34;
@@ -24,7 +24,7 @@
   &gt;Medium&lt;/a&gt;
 .&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Convolutional neural networks have been the driving force behind almost every major breakthrough in computer vision — &lt;strong&gt;but what if they’ve been holding us back all along?&lt;/strong&gt;&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vickiiimu.github.io/my-site/posts/vit/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vickiimu.github.io/my-site/posts/vit/featured.png" />
     </item>
     
   </channel>

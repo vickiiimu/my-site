@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects in the Wild on For Later Analysis</title>
-    <link>https://vickiiimu.github.io/my-site/categories/projects-in-the-wild/</link>
+    <link>https://vickiimu.github.io/my-site/categories/projects-in-the-wild/</link>
     <description>Recent content in Projects in the Wild on For Later Analysis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>vymu@mit.edu (Vicki Mu)</managingEditor>
     <webMaster>vymu@mit.edu (Vicki Mu)</webMaster>
     <copyright>© 2025 Vicki Mu</copyright>
-    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://vickiiimu.github.io/my-site/categories/projects-in-the-wild/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://vickiimu.github.io/my-site/categories/projects-in-the-wild/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Beginning on the Leaderboard: My First Kaggle Challenge in 7 Days</title>
-      <link>https://vickiiimu.github.io/my-site/posts/kaggle_imc/</link>
+      <link>https://vickiimu.github.io/my-site/posts/kaggle_imc/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
       <author>vymu@mit.edu (Vicki Mu)</author>
-      <guid>https://vickiiimu.github.io/my-site/posts/kaggle_imc/</guid>
+      <guid>https://vickiimu.github.io/my-site/posts/kaggle_imc/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Originally published on &lt;a
   href=&#34;https://medium.com/@vicki.y.mu/beginning-on-the-leaderboard-my-first-kaggle-challenge-in-7-days-0749ceebc825&#34;
@@ -35,12 +35,12 @@
 &lt;/h2&gt;
 
 &lt;figure&gt;
-      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;https://vickiiimu.github.io/my-site/img/kaggle_imc/imc2025.png&#34; alt=&#34;&#34; /&gt;
+      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;https://vickiimu.github.io/my-site/img/kaggle_imc/imc2025.png&#34; alt=&#34;&#34; /&gt;
   
   
   &lt;/figure&gt;
 &lt;p&gt;I first saw the Image Matching Challenge pop up on Kaggle sometime in early May. I bookmarked it out of curiosity — the problem sounded cool, and I’d been meaning to get into competitions for a while — but between MIT finals, end-of-semester deadlines, and packing up to move out, it got buried under everything else.&lt;/p&gt;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vickiiimu.github.io/my-site/posts/kaggle_imc/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://vickiimu.github.io/my-site/posts/kaggle_imc/featured.png" />
     </item>
     
   </channel>
