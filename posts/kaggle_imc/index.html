@@ -1191,7 +1191,17 @@
 <p>Unlike past IMC competitions, where the organizers provided pre-segmented scenes, <strong>this year you had to segment the scenes yourself</strong>. That meant reverse-engineering the scene structure from hundreds of loosely grouped image pairs before you could even begin estimating poses. It added an extra layer of uncertainty — you weren’t just solving the matching problem, you were solving the <em>context</em> problem, too.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="img/kaggle_imc/Different_Stairs_Diagram.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/kaggle_imc/Different_Stairs_Diagram_hu_5b096e908e98d4b0.png 330w,
+          /my-site/posts/kaggle_imc/Different_Stairs_Diagram_hu_9742203afe656c6.png 660w,
+          /my-site/posts/kaggle_imc/Different_Stairs_Diagram_hu_26a6f93ae28767e1.png 1024w,
+          /my-site/posts/kaggle_imc/Different_Stairs_Diagram_hu_3e9a575fedc9d2a5.png 2x"
+          src="/my-site/posts/kaggle_imc/Different_Stairs_Diagram_hu_9742203afe656c6.png"
+          data-zoom-src="/my-site/posts/kaggle_imc/Different_Stairs_Diagram_hu_3e9a575fedc9d2a5.png"
+          alt=""
+        />
   <figcaption>These are two completely different stairwells — but my pipeline lumped them into the same scene more than once. Turns out ‘gray steps in a hallway’ isn’t a very unique visual signature. Source: Kaggle IMC 2025</figcaption>
   
   </figure>
@@ -1216,14 +1226,34 @@
 <p>To tackle that, I used <strong>DINOv2 as a global image descriptor</strong>. For each image, I extracted global embeddings using a pretrained DINOv2 backbone, then clustered the embeddings using KMeans to group images into scenes. It wasn’t perfect — and I definitely tuned it more by vibe than theory — but it was good enough to avoid total chaos.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/kaggle_imc/cluster.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/kaggle_imc/cluster_hu_486fb9aa78af233c.png 330w,
+          /my-site/posts/kaggle_imc/cluster_hu_29a4f20e4fa7cecb.png 660w,
+          /my-site/posts/kaggle_imc/cluster_hu_c92c5c9e0e884bcc.png 1024w,
+          /my-site/posts/kaggle_imc/cluster_hu_f81d6ac6a289b852.png 2x"
+          src="/my-site/posts/kaggle_imc/cluster_hu_29a4f20e4fa7cecb.png"
+          data-zoom-src="/my-site/posts/kaggle_imc/cluster_hu_f81d6ac6a289b852.png"
+          alt=""
+        />
   <figcaption>Clustering results on the ET dataset using DINOv2 + KMeans. Two main clusters, with 3 outliers flagged. Source: author</figcaption>
   
   </figure>
 <p>Still, some scenes like <strong>vineyard</strong> and <strong>stairs</strong> were incredibly brittle. These environments had so much <strong>repetition and structural symmetry</strong> that even small mistakes in clustering led to <strong>completely incorrect pose estimates</strong>. Multiple rows of grapevines or similar staircases taken at slightly different angles or lighting conditions could easily be grouped together, even when they came from different physical spaces. Those mistakes hit hard — the mAA metric punishes wrong matches aggressively, and once scene segmentation goes wrong, everything downstream follows.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/kaggle_imc/differentscenes.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/kaggle_imc/differentscenes_hu_cf66fc1162bdccb6.png 330w,
+          /my-site/posts/kaggle_imc/differentscenes_hu_45fd9e9452c220ac.png 660w,
+          /my-site/posts/kaggle_imc/differentscenes_hu_346db6c573f5f78d.png 1024w,
+          /my-site/posts/kaggle_imc/differentscenes_hu_ed90e44237660986.png 2x"
+          src="/my-site/posts/kaggle_imc/differentscenes_hu_45fd9e9452c220ac.png"
+          data-zoom-src="/my-site/posts/kaggle_imc/differentscenes_hu_ed90e44237660986.png"
+          alt=""
+        />
   <figcaption>Three different vineyard scenes — visually similar enough to confuse DINOv2 and cluster them together, despite coming from completely different locations. These kinds of mistakes wrecked downstream pose estimates. Source: Kaggle IMC 2025</figcaption>
   
   </figure>
@@ -1273,7 +1303,17 @@
 <p>Days 5 and 6 were a blur of last-minute patches, scene-level debugging, and running the full dataset through my pipeline <em>without it catching fire</em>. I knew I was running out of time, and the priority shifted from “can I improve this?” to “can I trust this?”</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/kaggle_imc/prints.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/kaggle_imc/prints_hu_d5227de51bf6013c.png 330w,
+          /my-site/posts/kaggle_imc/prints_hu_1f4850214f120f34.png 660w,
+          /my-site/posts/kaggle_imc/prints_hu_34afbf6952eee9a3.png 1024w,
+          /my-site/posts/kaggle_imc/prints_hu_30f9e74d89d9e17c.png 2x"
+          src="/my-site/posts/kaggle_imc/prints_hu_1f4850214f120f34.png"
+          data-zoom-src="/my-site/posts/kaggle_imc/prints_hu_30f9e74d89d9e17c.png"
+          alt=""
+        />
   <figcaption>The real MVPs were all the print statements. Source: author</figcaption>
   
   </figure>
@@ -1296,7 +1336,17 @@
 <p>When the results came in, I landed at <strong>Rank 260 out of 943</strong>.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/kaggle_imc/leaderboard.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/kaggle_imc/leaderboard_hu_f453bb9dc6156532.png 330w,
+          /my-site/posts/kaggle_imc/leaderboard_hu_d1ab50b43efc4ce9.png 660w,
+          /my-site/posts/kaggle_imc/leaderboard_hu_8cccbe1a8eee00f1.png 1024w,
+          /my-site/posts/kaggle_imc/leaderboard_hu_6099aa10569ea37e.png 2x"
+          src="/my-site/posts/kaggle_imc/leaderboard_hu_d1ab50b43efc4ce9.png"
+          data-zoom-src="/my-site/posts/kaggle_imc/leaderboard_hu_6099aa10569ea37e.png"
+          alt=""
+        />
   <figcaption>Final leaderboard rank: 260 out of 943 — not a medal, but a 501-place climb in seven days, and my first ever Kaggle comp. I’ll take it. Source: author</figcaption>
   
   </figure>
@@ -1305,7 +1355,17 @@
 <p>I didn’t expect a medal — but seeing my name halfway up the leaderboard felt like proof of concept: I could do this.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/kaggle_imc/diagram.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/kaggle_imc/diagram_hu_890673aba9e9505a.png 330w,
+          /my-site/posts/kaggle_imc/diagram_hu_b6dc2f9c1749b3e.png 660w,
+          /my-site/posts/kaggle_imc/diagram_hu_3aae78b1f341ebc8.png 1024w,
+          /my-site/posts/kaggle_imc/diagram_hu_6aa4458ee758449d.png 2x"
+          src="/my-site/posts/kaggle_imc/diagram_hu_b6dc2f9c1749b3e.png"
+          data-zoom-src="/my-site/posts/kaggle_imc/diagram_hu_6aa4458ee758449d.png"
+          alt=""
+        />
   <figcaption>What one week of late nights, weird bugs, and unexpected breakthroughs looked like. The timeline of how I (barely) held it all together. Source: author</figcaption>
   
   </figure>

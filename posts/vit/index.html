@@ -1208,7 +1208,7 @@
 Their answer — <strong>the Vision Transformer (ViT)</strong>— sparked a new era in deep learning.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/featured-ViTarch.png" alt="Diagram showing the architecture of a Vision Transformer (ViT). An input image is divided into patches, linearly embedded with positional information, and passed through a stack of transformer encoder blocks. The encoder includes multi-head self-attention, normalization, and MLP layers, with output passed to a classification head." />
+      <img class="my-0 rounded-md" src="featured-ViTarch.png" alt="Diagram showing the architecture of a Vision Transformer (ViT). An input image is divided into patches, linearly embedded with positional information, and passed through a stack of transformer encoder blocks. The encoder includes multi-head self-attention, normalization, and MLP layers, with output passed to a classification head." />
   <figcaption><strong>Figure 1</strong>: Vision Transformer (ViT) architecture. Source: Dosovitskiy et al., 2020 (<a
   href="https://arxiv.org/abs/2010.11929"
     target="_blank"
@@ -1250,7 +1250,17 @@ Their answer — <strong>the Vision Transformer (ViT)</strong>— sparked a new 
 <p>This mechanism eliminated the need for recurrence and fixed step order, sidestepping the main weaknesses of RNNs.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/RNN-vs-Transformer.jpg" alt="Diagram comparing RNNs and Transformers. On the left, RNNs process inputs sequentially from left to right, passing hidden states forward through time steps. On the right, a Transformer encoder processes all inputs simultaneously, with each input connected to all others using weighted attention lines of varying thickness. Arrows and labels highlight the difference in processing order and parallelism." />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/RNN-vs-Transformer_hu_818461c59d5568e0.jpg 330w,
+          /my-site/posts/vit/RNN-vs-Transformer_hu_667aa06a30cf65e5.jpg 660w,
+          /my-site/posts/vit/RNN-vs-Transformer_hu_e6db1b483263bb8c.jpg 1024w,
+          /my-site/posts/vit/RNN-vs-Transformer_hu_233ac5ca36e5cefd.jpg 2x"
+          src="/my-site/posts/vit/RNN-vs-Transformer_hu_667aa06a30cf65e5.jpg"
+          data-zoom-src="/my-site/posts/vit/RNN-vs-Transformer_hu_233ac5ca36e5cefd.jpg"
+          alt="Diagram comparing RNNs and Transformers. On the left, RNNs process inputs sequentially from left to right, passing hidden states forward through time steps. On the right, a Transformer encoder processes all inputs simultaneously, with each input connected to all others using weighted attention lines of varying thickness. Arrows and labels highlight the difference in processing order and parallelism."
+        />
   <figcaption><strong>Figure 2</strong>: RNNs handle inputs sequentially, while Transformers attend to all tokens in parallel. Line thickness represents attention strength. Source: author.</figcaption>
   
   </figure>
@@ -1314,7 +1324,17 @@ At the time, CNNs dominated the field, but they came with their own set of limit
 <p>Instead of a sentence of words, ViT sees a sequence of image patch embeddings.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/Patchembedding.jpg" alt="Patch embedding diagram from ViT paper" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/Patchembedding_hu_f9390f337ea83d3.jpg 330w,
+          /my-site/posts/vit/Patchembedding_hu_64e492e5ede0ef5d.jpg 660w,
+          /my-site/posts/vit/Patchembedding_hu_3268951460f08f5b.jpg 1024w,
+          /my-site/posts/vit/Patchembedding_hu_84e71e5573776304.jpg 2x"
+          src="/my-site/posts/vit/Patchembedding_hu_64e492e5ede0ef5d.jpg"
+          data-zoom-src="/my-site/posts/vit/Patchembedding_hu_84e71e5573776304.jpg"
+          alt="Patch embedding diagram from ViT paper"
+        />
   <figcaption><strong>Figure 3</strong>: Patch embedding. Source: <a
   href="https://arxiv.org/abs/2010.11929"
     target="_blank"
@@ -1360,7 +1380,17 @@ At the time, CNNs dominated the field, but they came with their own set of limit
 </ul>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/sdp.png" alt="Attention equation visual" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/sdp_hu_f16b5b6570e5ece6.png 330w,
+          /my-site/posts/vit/sdp_hu_926802237ab493c0.png 660w,
+          /my-site/posts/vit/sdp_hu_b296ca8626375be9.png 1024w,
+          /my-site/posts/vit/sdp_hu_85e6f586fa2ff832.png 2x"
+          src="/my-site/posts/vit/sdp_hu_926802237ab493c0.png"
+          data-zoom-src="/my-site/posts/vit/sdp_hu_85e6f586fa2ff832.png"
+          alt="Attention equation visual"
+        />
   <figcaption>Equation 1: Scaled Dot-Product Attention</figcaption>
   
   </figure>
@@ -1371,7 +1401,17 @@ At the time, CNNs dominated the field, but they came with their own set of limit
 Each head attends to different parts of the sequence. This allows the model to understand complex relationships in parallel—not just spatial proximity, but also semantic structure.</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/multihead.png" alt="Two diagrams. On the left: Scaled Dot-Product Attention showing the flow Q -&gt; K -&gt; V through MatMul, Scale, Mask, Softmax, and another MatMul. On the right: Multi-Head Attention with multiple scaled dot-product attention heads, whose outputs are concatenated and passed through a linear layer." />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/multihead_hu_b7d7239fe7182fa.png 330w,
+          /my-site/posts/vit/multihead_hu_b3b32308aa0b5191.png 660w,
+          /my-site/posts/vit/multihead_hu_55d6dd54e487a172.png 1024w,
+          /my-site/posts/vit/multihead_hu_e4ffe1b6a0ed75da.png 2x"
+          src="/my-site/posts/vit/multihead_hu_b3b32308aa0b5191.png"
+          data-zoom-src="/my-site/posts/vit/multihead_hu_e4ffe1b6a0ed75da.png"
+          alt="Two diagrams. On the left: Scaled Dot-Product Attention showing the flow Q -&gt; K -&gt; V through MatMul, Scale, Mask, Softmax, and another MatMul. On the right: Multi-Head Attention with multiple scaled dot-product attention heads, whose outputs are concatenated and passed through a linear layer."
+        />
   <figcaption><strong>Figure 4</strong>: The left shows how attention scores are computed using queries (Q), keys (K), and values (V). The right illustrates how multiple attention &lsquo;heads&rsquo; capture diverse representations in parallel. Source: Vaswani et al. (<a
   href="https://arxiv.org/abs/1706.03762"
     target="_blank"
@@ -1405,7 +1445,17 @@ Each head attends to different parts of the sequence. This allows the model to u
 </ol>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/transformer.png" alt="Diagram of a Vision Transformer block. The input embedded patches go through LayerNorm, Multi-Head Attention, residual connection, then LayerNorm, MLP, and another residual connection." />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/transformer_hu_5547be77a4d76c40.png 330w,
+          /my-site/posts/vit/transformer_hu_1e5befbf1c747058.png 660w,
+          /my-site/posts/vit/transformer_hu_d7e93e0d84b20236.png 1024w,
+          /my-site/posts/vit/transformer_hu_22d28ae9b85a9bd6.png 2x"
+          src="/my-site/posts/vit/transformer_hu_1e5befbf1c747058.png"
+          data-zoom-src="/my-site/posts/vit/transformer_hu_22d28ae9b85a9bd6.png"
+          alt="Diagram of a Vision Transformer block. The input embedded patches go through LayerNorm, Multi-Head Attention, residual connection, then LayerNorm, MLP, and another residual connection."
+        />
   <figcaption><strong>Figure 5</strong>: ViT encoder block with attention, MLP, and residuals. Source: author</figcaption>
   
   </figure>
@@ -1747,14 +1797,34 @@ Each head attends to different parts of the sequence. This allows the model to u
 </ul>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/ViTlossAccuracy.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/ViTlossAccuracy_hu_cde2a6e106ed3165.png 330w,
+          /my-site/posts/vit/ViTlossAccuracy_hu_32365af770edbaa6.png 660w,
+          /my-site/posts/vit/ViTlossAccuracy_hu_d9864d19bd1827ec.png 1024w,
+          /my-site/posts/vit/ViTlossAccuracy_hu_9075e7516666cd2f.png 2x"
+          src="/my-site/posts/vit/ViTlossAccuracy_hu_32365af770edbaa6.png"
+          data-zoom-src="/my-site/posts/vit/ViTlossAccuracy_hu_9075e7516666cd2f.png"
+          alt=""
+        />
   <figcaption><strong>Figure 6:</strong> Training loss and test accuracy over 30 epochs. Source: author</figcaption>
   
   </figure>
 <p>Here are a few <strong>example outputs</strong> from the model. While it correctly identified many samples (like cats and frogs), it struggled with visually similar classes (e.g., misclassifying a ship as an airplane).</p>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/ViTpred.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/ViTpred_hu_8a896a4fe93a1d18.png 330w,
+          /my-site/posts/vit/ViTpred_hu_c5801a98bfb8733f.png 660w,
+          /my-site/posts/vit/ViTpred_hu_b7129ae349292aeb.png 1024w,
+          /my-site/posts/vit/ViTpred_hu_74b3450b119240a4.png 2x"
+          src="/my-site/posts/vit/ViTpred_hu_c5801a98bfb8733f.png"
+          data-zoom-src="/my-site/posts/vit/ViTpred_hu_74b3450b119240a4.png"
+          alt=""
+        />
   <figcaption><strong>Figure 7:</strong> Example predictions on CIFAR-10 images. Source: author</figcaption>
   
   </figure>
@@ -1765,7 +1835,17 @@ Each head attends to different parts of the sequence. This allows the model to u
 </ul>
 
 <figure>
-      <img class="my-0 rounded-md" src="/img/vit/ViTaccPerClass.png" alt="" />
+        <img
+          class="my-0 rounded-md"
+          srcset="
+          /my-site/posts/vit/ViTaccPerClass_hu_421ad8aa4fc82288.png 330w,
+          /my-site/posts/vit/ViTaccPerClass_hu_d023fec164699261.png 660w,
+          /my-site/posts/vit/ViTaccPerClass_hu_b912798fc6ccdab5.png 1024w,
+          /my-site/posts/vit/ViTaccPerClass_hu_76d9d5f632c2e77b.png 2x"
+          src="/my-site/posts/vit/ViTaccPerClass_hu_d023fec164699261.png"
+          data-zoom-src="/my-site/posts/vit/ViTaccPerClass_hu_76d9d5f632c2e77b.png"
+          alt=""
+        />
   <figcaption><strong>Figure 8:</strong> Accuracy by class. Source: author</figcaption>
   
   </figure>
