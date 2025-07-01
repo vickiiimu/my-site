@@ -4,6 +4,9 @@
 
 theme = "blowfish"
 baseURL = "https://vickiiimu.github.io/my-site/"
+relativeURLs = true
+canonifyURLs = true
+
 defaultContentLanguage = "en"
 disableLanguages = [] #to allow translation work requiring shipping to production
 
