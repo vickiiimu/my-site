@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://vickiiimu.github.io/my-site/sitemap.xml
