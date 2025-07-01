@@ -35,7 +35,17 @@
 &lt;/h2&gt;
 
 &lt;figure&gt;
-      &lt;img class=&#34;my-0 rounded-md&#34; src=&#34;../img/kaggle_imc/imc2025.png&#34; alt=&#34;&#34; /&gt;
+        &lt;img
+          class=&#34;my-0 rounded-md&#34;
+          srcset=&#34;
+          /my-site/posts/kaggle_imc/imc2025_hu_fdb36397f1ae3de1.png 330w,
+          /my-site/posts/kaggle_imc/imc2025_hu_7cf76a832433ed9b.png 660w,
+          /my-site/posts/kaggle_imc/imc2025_hu_935bf3ea4bf60ec0.png 1024w,
+          /my-site/posts/kaggle_imc/imc2025_hu_2d4a19e22af0a180.png 2x&#34;
+          src=&#34;https://vickiiimu.github.io/my-site/posts/kaggle_imc/imc2025_hu_7cf76a832433ed9b.png&#34;
+          data-zoom-src=&#34;https://vickiiimu.github.io/my-site/posts/kaggle_imc/imc2025_hu_2d4a19e22af0a180.png&#34;
+          alt=&#34;&#34;
+        /&gt;
   
   
   &lt;/figure&gt;
