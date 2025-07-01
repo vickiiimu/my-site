@@ -35,7 +35,7 @@ But 2025’s edition took that basic setup and made it *brutal*.
 
 Unlike past IMC competitions, where the organizers provided pre-segmented scenes, **this year you had to segment the scenes yourself**. That meant reverse-engineering the scene structure from hundreds of loosely grouped image pairs before you could even begin estimating poses. It added an extra layer of uncertainty — you weren’t just solving the matching problem, you were solving the *context* problem, too.
 
-{{< figure src="/img/kaggle_imc/Different Stairs Diagram.png" caption="These are two completely different stairwells — but my pipeline lumped them into the same scene more than once. Turns out ‘gray steps in a hallway’ isn’t a very unique visual signature. Source: Kaggle IMC 2025" >}}
+{{< figure src="/img/kaggle_imc/Different_Stairs_Diagram.png" caption="These are two completely different stairwells — but my pipeline lumped them into the same scene more than once. Turns out ‘gray steps in a hallway’ isn’t a very unique visual signature. Source: Kaggle IMC 2025" >}}
 
 What really separated IMC 2025 from class projects or standard CV pipelines was the real-world messiness of it all:
 
